@@ -9,7 +9,7 @@ class SimpleProducer {
 
     fun start() {
         println("-".repeat(25))
-        println("simple produser")
+        println("simple producer")
         println("-".repeat(5))
 
         println("inter topic name")
