@@ -21,7 +21,7 @@ class SimpleConsumer {
         }
 
         val props = Properties().apply {
-            put("bootstrap.servers", "127.0.0.1:9094")
+            put("bootstrap.servers", "127.0.0.1:9092")
             put("group.id", "test")
             put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
             put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")

@@ -8,6 +8,7 @@ private fun mainMenu() {
     println("please choose one : ")
     println("1- simple producer")
     println("2- simple consumer")
+    println("3- word counter app")
 
     val input = readLine()
 
@@ -16,7 +17,7 @@ private fun mainMenu() {
         return
     }
 
-    if(!menuNumberIsValid(input, 1..2))
+    if(!menuNumberIsValid(input, 1..3))
     {
         mainMenu()
         return
@@ -25,6 +26,7 @@ private fun mainMenu() {
     when(input.toInt()){
         1 -> SimpleProducer().start()
         2 -> SimpleConsumer().start()
+        3 -> WordCounter().start()
     }
 }
 

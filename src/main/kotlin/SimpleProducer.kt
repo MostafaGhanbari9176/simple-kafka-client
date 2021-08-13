@@ -21,7 +21,7 @@ class SimpleProducer {
         }
 
         val props = Properties().apply {
-            put("bootstrap.servers", "127.0.0.1:9093")
+            put("bootstrap.servers", "127.0.0.1:9092")
             put("acks", "all")
             put("retries", "0")
             put("batch.size", 16384)
@@ -50,9 +50,9 @@ class SimpleProducer {
 
         producer.send(
             ProducerRecord<String, String>(topic, key, value)
-        ) { metadata, exception ->
+        ) { _, exception ->
             if (exception != null)
-                println("a exception occurred:${exception.message} for message:$input")
+                println("an exception occurred:${exception.message} for message:$input")
         }
 
         getData()
